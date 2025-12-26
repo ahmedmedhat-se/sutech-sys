@@ -25,7 +25,6 @@ The system is designed to modernize university workflows, reduce paperwork, and 
 
 ---
 ## 🏗️ System Architecture
-### fRONTEND (React.js)
 ```
 sutech-sys/
 ├── client/
