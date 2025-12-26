@@ -20,13 +20,19 @@ The system is designed to modernize university workflows, reduce paperwork, and 
 
 ---
 ## 👥 Team
-- **Ahmed Medhat** – Full Stack Developer  
-- **Steven Gerges** – Backend / System Developer  
+- **Ahmed Medhat** – Backend Developer  
+- **Steven Gerges** – Frontend Developer  
 
 ---
 ## 🏗️ System Architecture
-
-
+### fRONTEND (React.js)
+```
+sutech-sys/
+├── client/
+├── server/
+├── database/
+└── README.md
+```
 ---
 ## 🚀 Project Vision
 This project aims to provide a digital, modular, and extensible foundation for academic institutions—allowing universities to upgrade outdated systems into fast, modern, and web-based platforms.
