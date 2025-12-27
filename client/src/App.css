@@ -1,0 +1,248 @@
+:root {
+    --primary-color: #cf644b;
+    --secondary-color: #257988;
+    --tertiary-color: #58286e;
+  }
+
+h1 {
+    color: black;
+}
+
+.custom-navbar {
+    background: linear-gradient(135deg, var(--tertiary-color) 0%, var(--secondary-color) 100%);
+    padding: 1rem 0;
+  }
+  
+  .navbar-brand-custom {
+    color: white !important;
+  }
+  
+  .logo-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .brand-title {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .brand-subtitle {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .nav-link-custom {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link-custom:hover {
+    color: white !important;
+    transform: translateY(-2px);
+  }
+  
+  .nav-dropdown-custom .dropdown-toggle {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .nav-dropdown-custom .dropdown-toggle:hover {
+    color: white !important;
+  }
+  
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  .dropdown-section-title {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    letter-spacing: 0.5px;
+  }
+  
+  /* Page Headers */
+  .page-header {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--tertiary-color) 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-title {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+    margin: 0.5rem 0 0 0;
+    opacity: 0.9;
+  }
+  
+  /* Card Styling */
+  .custom-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .card-header-custom {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #d97960 100%);
+    color: white;
+    border-radius: 10px 10px 0 0 !important;
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Table Styling */
+  .custom-table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .custom-table thead {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .custom-table tbody tr:hover {
+    background-color: rgba(37, 121, 136, 0.05);
+  }
+  
+  /* Badge Styling */
+  .badge-custom-primary {
+    background-color: var(--primary-color);
+  }
+  
+  .badge-custom-secondary {
+    background-color: var(--secondary-color);
+  }
+  
+  .badge-custom-tertiary {
+    background-color: var(--tertiary-color);
+  }
+  
+  /* Button Styling */
+  .btn-custom-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+  }
+  
+  .btn-custom-primary:hover {
+    background-color: #b85840;
+    border-color: #b85840;
+    color: white;
+  }
+  
+  .btn-custom-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .btn-custom-secondary:hover {
+    background-color: #1e6371;
+    border-color: #1e6371;
+    color: white;
+  }
+  
+  /* Progress Bar */
+  .custom-progress {
+    height: 25px;
+    border-radius: 10px;
+  }
+  
+  .progress-bar-custom {
+    background-color: var(--primary-color);
+  }
+  
+  /* Stat Cards */
+  .stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .stat-primary .stat-value {
+    color: var(--primary-color);
+  }
+  
+  .stat-secondary .stat-value {
+    color: var(--secondary-color);
+  }
+  
+  .stat-tertiary .stat-value {
+    color: var(--tertiary-color);
+  }
+  
+  /* Form Styling */
+  .form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(37, 121, 136, 0.25);
+  }
+  
+  .form-select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(37, 121, 136, 0.25);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 1.5rem;
+    }
+    
+    .stat-value {
+      font-size: 2rem;
+    }
+  }
