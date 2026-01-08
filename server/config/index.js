@@ -6,7 +6,7 @@ const config = {
         host: process.env.DB_HOST || 'localhost',
         user: process.env.DB_USER || 'root',
         password: process.env.DB_PASSWORD || '',
-        name: process.env.DB_NAME || 'sutech_sys_db',
+        name: process.env.DB_NAME || 'sutech_sys',
         port: process.env.DB_PORT || 3306
     },
     

@@ -15,7 +15,7 @@ export const genereateTokens = (user) => {
 export const generateAccessToken = (user) => {
     return jwt.sign(
         {
-            id: user.id,
+            user_id: user.user_id,
             email: user.email,
             role: user.role
         },
@@ -31,7 +31,7 @@ export const generateAccessToken = (user) => {
 export const generateRefreshToken = (user) => {
     return jwt.sign(
         {
-            id: user.id,
+            user_id: user.user_id,
             email: user.email,
             role: user.role
         },

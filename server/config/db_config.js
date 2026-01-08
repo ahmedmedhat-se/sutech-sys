@@ -1,4 +1,4 @@
-import mysql from "mysql2";
+import mysql from "mysql2/promise.js";
 import dotenv from "dotenv";
 import { config, validateConfig } from "../config/index.js";
 
