@@ -141,7 +141,7 @@ client/
 - **SemesterActivityMarks.jsx** - Semester activity marks display
 - **ExamSchedule.jsx** - Exam schedule information
 
-### Request Components (`/requests/`)
+### Request Components (`/components/`)
 All request-related components for various student services:
 - Academic Requests: Register/Add/Drop, Retake, Drop Course, Incomplete Course, Course Withdrawal
 - Program Requests: Change Program, Track Declaration
