@@ -4,28 +4,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // Import page components
-import AcademicPlan from './app/components/AcademicPlan';
-import StudentAttendance from './app/components/StudentAttendance';
-import SemesterActivityMarks from './app/components/SemesterActivityMarks';
-import ExamSchedule from './app/components/ExamSchedule';
+import AcademicPlan from './app/AcademicPlan.jsx';
+import StudentAttendance from './app/StudentAttendance.jsx';
+import SemesterActivityMarks from './app/SemesterActivityMarks.jsx';
+import ExamSchedule from './app/ExamSchedule.jsx';
 
 // Import request components
-import CourseWithdrawal from './app/components/requests/CourseWithdrawal';
-import StudentServices from './app/components/requests/StudentServices';
-import DropCourse from './app/components/requests/DropCourse';
-import IncompleteCourse from './app/components/requests/IncompleteCourse';
-import OnlinePayment from './app/components/requests/OnlinePayment';
-import ChangeProgram from './app/components/requests/ChangeProgram';
-import TrackDeclaration from './app/components/requests/TrackDeclaration';
-import Appeal from './app/components/requests/Appeal';
-import RegisterAddDrop from './app/components/requests/RegisterAddDrop';
-import Retake from './app/components/requests/Retake';
+import CourseWithdrawal from './app/components/CourseWithdrawal.jsx';
+import StudentServices from './app/components/StudentServices.jsx';
+import DropCourse from './app/components/DropCourse.jsx';
+import IncompleteCourse from './app/components/IncompleteCourse.jsx';
+import OnlinePayment from './app/components/OnlinePayment.jsx';
+import ChangeProgram from './app/components/ChangeProgram.jsx';
+import TrackDeclaration from './app/components/TrackDeclaration.jsx';
+import Appeal from './app/components/Appeal.jsx';
+import RegisterAddDrop from './app/components/RegisterAddDrop.jsx';
+import Retake from './app/components/Retake.jsx';
 
 // Import staff components
-import AskAdvisor from './app/components/staff/AskAdvisor';
+import AskAdvisor from './app/staff/AskAdvisor.jsx';
 
 // Import reports components
-import StudentSchedule from './app/components/reports/StudentSchedule';
+import StudentSchedule from './app/reports/StudentSchedule.jsx';
 
 export default function App() {
   return (
