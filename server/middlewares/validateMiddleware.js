@@ -1,17 +1,27 @@
 import { validationResult } from "express-validator";
 
-export const validateMiddleware = (req, res, next) => {
-    const errors = validationResult(req);
+/**
+ * Middleware to handle validation errors
+ */
+export const validateMiddleware = (validations) => {
+    return async (req, res, next) => {
+        for (let validation of validations) {
+            const result = await validation.run(req);
+            if (result.errors.length) break;
+        };
 
-    if (!errors.isEmpty()){
-        return res.status(400).json({
-            errors: errors.array().map(err => ({
-                field: err.param,
-                message: err.msg
-            })),
-            success: false
-        });
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({
+                success: false,
+                message: "Validation failed",
+                errors: errors.array().map(err => ({
+                    field: err.path,
+                    message: err.msg,
+                    value: err.value
+                }))
+            });
+        }
+        next();
     };
-
-    next();
 };

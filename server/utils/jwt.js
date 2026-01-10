@@ -1,63 +1,38 @@
-import jwt from "jsonwebtoken";
+import jwt from 'jsonwebtoken';
 import dotenv from "dotenv";
-import { config, validateConfig } from "../config/index.js";
 
 dotenv.config();
-validateConfig();
-
-export const genereateTokens = (user) => {
-    const accessToken = generateAccessToken(user);
-    const refreshToken = generateRefreshToken(user);
-
-    return { accessToken, refreshToken };
-};
 
 export const generateAccessToken = (user) => {
+    const payload = {
+        user_id: user.user_id,
+        email: user.email,
+        role: user.role
+    };
+    
     return jwt.sign(
-        {
-            user_id: user.user_id,
-            email: user.email,
-            role: user.role
-        },
-        config.jwt.secret,
-        { 
-            expiresIn: config.jwt.accessExpiresIn,
-            issuer: "sutech-api",
-            audience: "sutech-client"
-        }
-    )
+        payload,
+        process.env.JWT_SECRET,
+        { expiresIn: process.env.JWT_ACCESS_EXPIRES_IN }
+    );
 };
 
 export const generateRefreshToken = (user) => {
+    const payload = {
+        user_id: user.user_id
+    };
+    
     return jwt.sign(
-        {
-            user_id: user.user_id,
-            email: user.email,
-            role: user.role
-        },
-        config.jwt.refreshSecret,
-        { 
-            expiresIn: config.jwt.refreshExpiresIn,
-            issuer: "sutech-api",
-            audience: "sutech-client"
-        }
-    )
+        payload,
+        process.env.JWT_REFRESH_SECRET,
+        { expiresIn: process.env.JWT_REFRESH_EXPIRES_IN }
+    );
 };
 
 export const verifyAccessToken = (token) => {
-    try {
-        return jwt.verify(token, config.jwt.secret);
-    } catch (error){
-        console.error(`Access Token Verification Error: ${error.message}`);
-        return null;
-    }
+    return jwt.verify(token, process.env.JWT_SECRET);
 };
 
 export const verifyRefreshToken = (token) => {
-    try {
-        return jwt.verify(token, config.jwt.refreshSecret);
-    } catch (error) {
-        console.error(`Refresh Token Verification Error: ${error.message}`)
-        return null;
-    }
+    return jwt.verify(token, process.env.JWT_REFRESH_SECRET);
 };

@@ -554,3 +554,7 @@ SELECT
 FROM information_schema.TABLES 
 WHERE TABLE_SCHEMA = 'sutech_sys'
 ORDER BY CREATE_TIME;
+
+-- Change the column name in database
+-- ALTER TABLE users 
+-- CHANGE COLUMN password_hash password VARCHAR(255) NOT NULL;
